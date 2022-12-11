@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "/Users/yukiendo/go"
+		},
+		{
+			"name": "[go-samples source archive]",
+			"uri": "codeql-zip-archive://0-54/Users/yukiendo/workplace/codeql-db/go-samples/src.zip"
+		}
+	],
+	"settings": {}
+}
