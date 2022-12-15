@@ -1,1 +1,2 @@
 *.sarif
+custom-queries/go/.cache/*
