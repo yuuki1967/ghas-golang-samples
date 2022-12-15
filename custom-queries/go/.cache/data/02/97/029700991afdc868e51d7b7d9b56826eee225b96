@@ -1,0 +1,38 @@
+ #      Precompiled CodeQL query
+---
+format:
+- 202210190
+creator: "2.11.4"
+name: "Custom_LogInjection.ql"
+dbscheme: "90fa7836e0a239f69bbebffcf342e92c240d54bc"
+stages:
+- cached: "2677b9fa8cffe98c50b9a0803a638347b185f5c5"
+  debugInfo: "fecaa121855b37cb5060daceb1adc2e02056f801"
+- cached: "e50abe7148621656aff2fbfd70331394eba8d7fd"
+  debugInfo: "fecaa121855b37cb5060daceb1adc2e02056f801"
+- cached: "7bdd9597f71d2ecea22bb42d25e62cc69e205789"
+  debugInfo: "fecaa121855b37cb5060daceb1adc2e02056f801"
+- cached: "548ac8d722e50e64ee1067fe3118b73937ad2b67"
+  debugInfo: "fecaa121855b37cb5060daceb1adc2e02056f801"
+- cached: "74eb80af64f8c9b5b95d35acb765d2f3556c9438"
+  debugInfo: "fecaa121855b37cb5060daceb1adc2e02056f801"
+- cached: "929156ba97af1150cbf1b4a3d8df9ade0a42a8f5"
+  debugInfo: "fecaa121855b37cb5060daceb1adc2e02056f801"
+- cached: "49ffd2a7c85a13d6e43d8f994be7215d86bdf078"
+  debugInfo: "fecaa121855b37cb5060daceb1adc2e02056f801"
+- cached: "e70fea224a4495a13db939532e243481f65b774f"
+  debugInfo: "fecaa121855b37cb5060daceb1adc2e02056f801"
+- cached: "36d5060faea10bd8af5dbc4a90f355f0f31a4757"
+  debugInfo: "fecaa121855b37cb5060daceb1adc2e02056f801"
+- cached: "2d8f5bc842424b8821a73faecdd3bd8c1c0934cb"
+  debugInfo: "fecaa121855b37cb5060daceb1adc2e02056f801"
+results:
+  edges:
+    resultArranger: "2\"a\"ei12\"b\"ei12"
+  nodes:
+    resultArranger: "3\"n\"ei12\"key\"s\"val\"s"
+  subpaths:
+    resultArranger: "4\"arg\"ei12\"par\"ei12\"ret\"ei12\"out\"ei12"
+  '#select':
+    resultArranger: "60ei12\"source\"ei12\"sink\"ei120s0ei120s"
+inputsDigest: "029700991afdc868e51d7b7d9b56826eee225b96"
