@@ -1,6 +1,4 @@
 name: "Custom CodeQL config"
 
 queries:
-    - uses: security-and-quality
     - uses: ./custom-queries/code-scanning.qls
-    - uses: ./custom-queries/go/Custom_LogInjection.ql
