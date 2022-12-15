@@ -11,7 +11,7 @@ import (
 
 func init() {
 	// Log as JSON instead of the default ASCII formatter.
-	logr.SetFormatter(&logr.JSONFormatter{DisableHTMLEscape: false})
+	logr.SetFormatter(&logr.JSONFormatter{})
 
 	// Output to stdout instead of the default stderr
 	// Can be any io.Writer, see below for File example
