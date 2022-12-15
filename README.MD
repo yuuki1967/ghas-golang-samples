@@ -58,3 +58,8 @@ func hello(w http.ResponseWriter, req *http.Request) {
 	}).Warn("user %s logged in.\n", username)
 ...
 ```
+
+## About the sample code
+### How to build and run
+go run sandbox
+http://localhost:8090/hello on a browser
