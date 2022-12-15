@@ -61,5 +61,5 @@ func hello(w http.ResponseWriter, req *http.Request) {
 
 ## About the sample code
 ### How to build and run
-go run sandbox
-http://localhost:8090/hello on a browser
+1) go run sandbox
+2) http://localhost:8090/hello on a browser
