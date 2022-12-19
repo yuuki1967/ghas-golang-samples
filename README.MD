@@ -1,8 +1,8 @@
 # The repo for evaluating the custom query for supporting logrus
 
-## background
-The customer is using the 3rd party package logrus (https://github.com/sirupsen/logrus) with GO lang.
-When he scanned the codebase with CodeQL, it detected a false positive - “Log entries created from user input” CWE-117
+## Background
+So far out-box query has not supported the 3rd party package logrus (https://github.com/sirupsen/logrus) with GO lang.
+Whenever you use SetFormatter with DisableHTMLEscape:false, it still alerts as “Log entries created from user input” CWE-117.
 
 ## Root casue
 The query -go/log-injection.ql only supports default log framework. So even if you sanitized with "DisableHTMLEscape : false", it would detect the alert.
