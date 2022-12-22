@@ -45,8 +45,27 @@ I generated the custom query based on the original go/log-injection. The query i
 ```
 ## CLI
 ```
+tree ../codeql/qlpacks/codeql/go-custom
+../codeql/qlpacks/codeql/go-custom
+└── 0.0.0
+    ├── codeql-pack.lock.yml
+    ├── custom-queries
+    │   ├── Custom_LogInjection.ql
+    │   └── code-scanning.qls
+    ├── custom.qls
+    └── qlpack.yml
+
+cat ../codeql/qlpacks/codeql/go-custom/0.0.0/custom.qls 
+- qlpack: codeql/go-custom
+- qlpack: codeql/go-queries
+- exclude:
+    id:
+    - go/log-injection
 codeql database create ../codeql-db/go-samples --language="go" --overwrite
-codeql database analyze ../codeql-db/go-samples --format=sarif-latest --output=result.sarif custom-queries/code-scanning.qls
+codeql resolve queries custom-queries 
+Recording pack reference codeql/go-custom at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-custom/0.0.0.
+/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-custom/0.0.0/custom-queries/Custom_LogInjection.ql
+codeql database analyze ../codeql-db/go-samples --format=sarif-latest --output=result.sarif /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-custom/0.0.0/custom.qls
 ```
 
 ## Actions
