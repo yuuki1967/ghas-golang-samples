@@ -11,8 +11,13 @@ import (
 
 func init() {
 	// Log as JSON instead of the default ASCII formatter.
-	logr.SetFormatter(&logr.JSONFormatter{DisableHTMLEscape: true})
-
+	const Environment = "production"
+	if Environment == "production" {
+		logr.SetFormatter(&logr.JSONFormatter{DisableHTMLEscape: false})
+	} else {
+		// The TextFormatter is default, you don't actually have to do this.
+		logr.SetFormatter(&logr.TextFormatter{})
+	}
 	// Output to stdout instead of the default stderr
 	// Can be any io.Writer, see below for File example
 	logr.SetOutput(os.Stdout)
