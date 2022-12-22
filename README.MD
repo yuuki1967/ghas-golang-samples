@@ -45,6 +45,8 @@ I generated the custom query based on the original go/log-injection. The query i
 ```
 ## CLI
 ```
+download from https://github.com/github/codeql-cli-binaries/releases
+
 tree ../codeql/qlpacks/codeql/go-custom
 ../codeql/qlpacks/codeql/go-custom
 └── 0.0.0
@@ -55,16 +57,22 @@ tree ../codeql/qlpacks/codeql/go-custom
     ├── custom.qls
     └── qlpack.yml
 
+codeql database create ../codeql-db/go-samples --language="go" --overwrite
+
+codeql resolve queries custom-queries 
+Recording pack reference codeql/go-custom at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-custom/0.0.0.
+/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-custom/0.0.0/custom-queries/Custom_LogInjection.ql
+
+codeql resolve qlpacks
+codeql/go-custom (/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-custom/0.0.0)
+
 cat ../codeql/qlpacks/codeql/go-custom/0.0.0/custom.qls 
 - qlpack: codeql/go-custom
 - qlpack: codeql/go-queries
 - exclude:
     id:
     - go/log-injection
-codeql database create ../codeql-db/go-samples --language="go" --overwrite
-codeql resolve queries custom-queries 
-Recording pack reference codeql/go-custom at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-custom/0.0.0.
-/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-custom/0.0.0/custom-queries/Custom_LogInjection.ql
+
 codeql database analyze ../codeql-db/go-samples --format=sarif-latest --output=result.sarif /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-custom/0.0.0/custom.qls
 ```
 
