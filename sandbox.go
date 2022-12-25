@@ -5,6 +5,7 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"strings"
 
 	logr "github.com/sirupsen/logrus"
 )
@@ -13,7 +14,7 @@ func init() {
 	// Log as JSON instead of the default ASCII formatter.
 	const Environment = "production"
 	if Environment == "production" {
-		logr.SetFormatter(&logr.JSONFormatter{DisableHTMLEscape: false})
+		logr.SetFormatter(&logr.JSONFormatter{DisableHTMLEscape: true})
 	} else {
 		// The TextFormatter is default, you don't actually have to do this.
 		logr.SetFormatter(&logr.TextFormatter{})
@@ -31,11 +32,13 @@ func hello(w http.ResponseWriter, req *http.Request) {
 	defer req.Body.Close()
 	b, _ := io.ReadAll(req.Body)
 	username := string(b)
-	//	log.Printf("user %s logged in.\n", username)
+	escapedusername := strings.Replace(username, "\n", "", -1)
+	escapedusername = strings.Replace(escapedusername, "\r", "", -1)
+
 	logr.WithFields(logr.Fields{
 		"omg":    true,
 		"number": 122,
-	}).Warn("user %s logged in.\n", username)
+	}).Warn("user %s logged in.\n", escapedusername)
 	fmt.Fprintf(w, "hello\n")
 }
 
