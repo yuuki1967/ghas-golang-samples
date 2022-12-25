@@ -54,6 +54,7 @@ module LogrusInjection {
   /**
    * A call to `strings.Replace` or `strings.ReplaceAll`, considered as a sanitizer
    * for log injection.
+   * /
   class ReplaceSanitizer extends Sanitizer {
     ReplaceSanitizer() {
       exists(string name, DataFlow::CallNode call |
@@ -82,7 +83,7 @@ module LogrusInjection {
         // Mark "%q" formats as safe, but not "%#q", which would preserve newline characters.
         safeDirective.regexpMatch("%[^%#]*q")
       ) or
-      exists(CallExpr cexpr | cexpr.getAnArgument().getAChild().getChild(1).getChild(0).toString() = "DisableHTMLEscape" and 
+      exists(CallExpr cexpr| cexpr.getAnArgument().getAChild().getChild(1).getChild(0).toString() = "DisableHTMLEscape" and 
         cexpr.getAnArgument().getAChild().getChild(1).getChild(1).toString() = "false")
     }
   }

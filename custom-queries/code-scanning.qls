@@ -1,6 +1,6 @@
 # Reusing existing QL Pack
-- import: codeql-suites/go-code-scanning.qls
-  from: codeql-go
+- queries: codeql/go-custom/Custom-LogInjection.ql
+- qlpack: codeql/go-queries
 - exclude:
     id:
     - go/log-injection 
