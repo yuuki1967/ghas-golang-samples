@@ -32,13 +32,11 @@ func hello(w http.ResponseWriter, req *http.Request) {
 	defer req.Body.Close()
 	b, _ := io.ReadAll(req.Body)
 	username := string(b)
-	escapedusername := strings.Replace(username, "\n", "", -1)
-	escapedusername = strings.Replace(escapedusername, "\r", "", -1)
 
 	logr.WithFields(logr.Fields{
 		"omg":    true,
 		"number": 122,
-	}).Warn("user %s logged in.\n", escapedusername)
+	}).Warn("user %s logged in.\n", username)
 	fmt.Fprintf(w, "hello\n")
 }
 
