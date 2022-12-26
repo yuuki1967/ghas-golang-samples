@@ -14,7 +14,7 @@ func init() {
 	// Log as JSON instead of the default ASCII formatter.
 	const Environment = "production"
 	if Environment == "production" {
-		logr.SetFormatter(&logr.JSONFormatter{DisableHTMLEscape: true})
+		logr.SetFormatter(&logr.JSONFormatter{})
 	} else {
 		// The TextFormatter is default, you don't actually have to do this.
 		logr.SetFormatter(&logr.TextFormatter{})
