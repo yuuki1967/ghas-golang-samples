@@ -54,7 +54,7 @@ module LogrusInjection {
   /**
    * A call to `strings.Replace` or `strings.ReplaceAll`, considered as a sanitizer
    * for log injection.
-   * /
+   */
   class ReplaceSanitizer extends Sanitizer {
     ReplaceSanitizer() {
       exists(string name, DataFlow::CallNode call |
