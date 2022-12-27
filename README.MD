@@ -54,7 +54,8 @@ I generated the custom query based on the original go/log-injection. The query i
 8) move to your repository directory
 9) codeql database create ../codeql-db/go-samples --language="go" --overwrite
 10) codeql database analyze ../codeql-db/go-samples --format=sarif-latest --output=result.sarif $CODEQL_HOME/qlpacks/codeql/go-custom/0.0.0/custom.qls
-NODE:1-8 you operate Only once. 9, 10 whenever you scan your code base.
+
+*NOTE:1-8 you operate Only once. 9, 10 whenever you scan your code base.
 
 ## Actions
 please refer to ./github/workflows/codeql.yml
