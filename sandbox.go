@@ -5,16 +5,16 @@ import (
 	"io"
 	"net/http"
 	"os"
-	"strings"
 
 	logr "github.com/sirupsen/logrus"
+	"logmod.com/logmod"
 )
 
 func init() {
 	// Log as JSON instead of the default ASCII formatter.
 	const Environment = "production"
 	if Environment == "production" {
-		logr.SetFormatter(&logr.JSONFormatter{})
+		logr.SetFormatter(&logr.JSONFormatter{DisableHTMLEscape: false})
 	} else {
 		// The TextFormatter is default, you don't actually have to do this.
 		logr.SetFormatter(&logr.TextFormatter{})
@@ -37,6 +37,7 @@ func hello(w http.ResponseWriter, req *http.Request) {
 		"omg":    true,
 		"number": 122,
 	}).Warn("user %s logged in.\n", username)
+	logmod.Logprint(username)
 	fmt.Fprintf(w, "hello\n")
 }
 
