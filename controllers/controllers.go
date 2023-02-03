@@ -14,7 +14,7 @@ func hello(w http.ResponseWriter, req *http.Request) {
 	b, _ := io.ReadAll(req.Body)
 	username := string(b)
 
-	logger.Log().Warn("user %s logged in.\n", username)
+	logger.Log().Errorf("user %s logged in.\n", username)
 	fmt.Fprintf(w, "hello\n")
 }
 

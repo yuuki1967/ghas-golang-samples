@@ -4,7 +4,7 @@ go 1.18
 
 replace example.com/controllers => ./controllers
 
-replace example.com/logger => ./logger
+replace example.com/logger => ../util/logger
 
 require example.com/controllers v0.0.0-00010101000000-000000000000
 

@@ -2,7 +2,7 @@ module example.com/controllers
 
 go 1.18
 
-replace example.com/logger => ../logger
+replace example.com/logger => ../../util/logger
 
 require example.com/logger v0.0.0-00010101000000-000000000000
 
