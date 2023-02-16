@@ -8,4 +8,4 @@ queries:
 query-filters:
     - exclude:
         id: go/log-injection 
-        id: go/sql-injection
+            go/sql-injection
