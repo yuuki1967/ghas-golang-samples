@@ -4,3 +4,4 @@
 - exclude:
     id:
     - go/log-injection 
+    - go/sql-injection 

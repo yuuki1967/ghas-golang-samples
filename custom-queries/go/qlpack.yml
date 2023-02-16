@@ -1,4 +1,4 @@
-name: custom-go-loginjection
+name: custom-go
 version: 0.0.0
 libraryPathDependencies:
     - codeql-go

@@ -1,2 +1,3 @@
 *.sarif
 custom-queries/go/.cache/*
+util
