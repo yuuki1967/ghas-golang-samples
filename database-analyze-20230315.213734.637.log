@@ -1,0 +1,1197 @@
+[2023-03-15 21:37:34] This is codeql database analyze ../codeql-db/ghas-golang-samples --format=sarif-latest --output=results.sarif /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-customs/0.0.0/infosys.qls --rerun --logdir=.
+[2023-03-15 21:37:34] [PROGRESS] database analyze> Running queries.
+[2023-03-15 21:37:34] Running plumbing command: codeql database run-queries --evaluator-log-level=5 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/Users/yukiendo/workplace/ghas-golang-samples/qlconfig.yml --rerun -- /Users/yukiendo/workplace/codeql-db/ghas-golang-samples /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-customs/0.0.0/infosys.qls
+[2023-03-15 21:37:34] Calling plumbing command: codeql resolve ram --format=json
+[2023-03-15 21:37:34] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx8192M",
+                        "--off-heap-ram=8192"
+                      ]
+[2023-03-15 21:37:34] Spawning plumbing command: execute queries -J-Xmx8192M --off-heap-ram=8192 --verbosity=progress --logdir=/Users/yukiendo/workplace/ghas-golang-samples --evaluator-log-level=5 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/Users/yukiendo/workplace/ghas-golang-samples/qlconfig.yml --rerun --output=/Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results -- /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/db-go /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-customs/0.0.0/infosys.qls
+[2023-03-15 21:37:41] Plumbing command codeql execute queries terminated with status 0.
+[2023-03-15 21:37:41] Plumbing command codeql database run-queries completed with status 0.
+[2023-03-15 21:37:41] [PROGRESS] database analyze> Interpreting results.
+[2023-03-15 21:37:41] Running plumbing command: codeql database interpret-results --format=sarif-latest -o=/Users/yukiendo/workplace/ghas-golang-samples/results.sarif --max-paths=4 --csv-location-format=line-column --print-diagnostics-summary --print-metrics-summary -- /Users/yukiendo/workplace/codeql-db/ghas-golang-samples /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-customs/0.0.0/infosys.qls
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve queries --qlconfig-file=/Users/yukiendo/workplace/ghas-golang-samples/qlconfig.yml --format=json -- /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-customs/0.0.0/infosys.qls
+[2023-03-15 21:37:41] [DETAILS] resolve queries> Expanding query suite /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-customs/0.0.0/infosys.qls.
+[2023-03-15 21:37:41] [PROGRESS] resolve queries> Recording pack reference codeql/go-examples at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-customs/0.0.0.
+[2023-03-15 21:37:41] [PROGRESS] resolve queries> Recording pack reference codeql/go-queries at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Resolution instruction: qlpack codeql/go-queries
+[2023-03-15 21:37:41] [WARN] resolve queries> Running the default query suite of codeql/go-queries. In order to run all queries in the query suite, use a clause like this:
+                             - queries: '.'
+                               from: codeql/go-queries
+                               version: 0.2.5 # Optional
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Resolving default query suite of codeql/go-queries.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Suite description = Standard Code Scanning queries for Go
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Resolution instruction: queries '.'.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Scanning for QL files at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Not recursing into upgrades directory /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.codeql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Found 78 QL files in /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Resolution instruction: apply 'code-scanning-selectors.yml'.
+[2023-03-15 21:37:41] [PROGRESS] resolve queries> Recording pack reference codeql/suite-helpers at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.codeql/libraries/codeql/suite-helpers/0.2.0.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Applying nested suite file /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.codeql/libraries/codeql/suite-helpers/0.2.0/code-scanning-selectors.yml from codeql/suite-helpers.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Suite description = Selectors for selecting the Code-Scanning-relevant queries for a language
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Resolution instruction: include.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/AlertSuppression.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/ExtractionErrors.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/SuccessfullyExtractedFiles.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/ConstantLengthComparison.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/InconsistentLoopOrientation.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/LengthComparisonOffByOne.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/MissingErrorCheck.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/MistypedExponentiation.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/WhitespaceContradictsPrecedence.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/WrappedErrorAlwaysNil.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Metrics/FLinesOfCode.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Metrics/FLinesOfComment.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/CompareIdenticalValues.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/DeadStoreOfField.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/DeadStoreOfLocal.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/DuplicateBranches.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/DuplicateCondition.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/DuplicateSwitchCase.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/ExprHasNoEffect.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/ImpossibleInterfaceNilCheck.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/NegativeLengthCheck.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/RedundantExpr.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/RedundantRecover.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/SelfAssignment.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/ShiftOutOfRange.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/UnreachableStatement.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/ExternalAPIsUsedWithUntrustedData.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteHostnameRegexp.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteUrlSchemeCheck.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/MissingRegexpAnchor.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/SuspiciousCharacterInRegexp.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/UntrustedDataToExternalAPI.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/UntrustedDataToUnknownExternalAPI.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/TaintedPath.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/UnsafeUnzipSymlink.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/ZipSlip.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-078/CommandInjection.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-078/StoredCommand.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-079/ReflectedXss.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-079/StoredXss.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-089/SqlInjection.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-089/StringBreak.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-117/LogInjection.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-190/AllocationSizeOverflow.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-209/StackTraceExposure.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-295/DisabledCertificateCheck.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-312/CleartextLogging.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-322/InsecureHostKeyCallback.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-326/InsufficientKeySize.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-327/InsecureTLS.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-338/InsecureRandomness.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-352/ConstantOauth2State.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/BadRedirectCheck.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/OpenUrlRedirect.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-640/EmailInjection.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-643/XPathInjection.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-681/IncorrectIntegerConversionQuery.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-798/HardcodedCredentials.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-918/RequestForgery.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Summary/LinesOfCode.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/definitions.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-090/LDAPInjection.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-1004/CookieWithoutHttpOnly.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-285/PamAuthBypass.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-321/HardcodedKeys.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-327/WeakCryptoAlgorithm.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-369/DivideByZero.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-400/DatabaseCallInLoop.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-79/HTMLTemplateEscapingPassthrough.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-807/SensitiveConditionBypass.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-840/ConditionalBypass.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-918/SSRF.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-942/CorsMisconfiguration.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/InconsistentCode/DeferInLoop.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/InconsistentCode/GORMErrorNotChecked.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/IntegerOverflow/IntegerOverflow.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/Unsafe/WrongUsageOfUnsafe.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly candidating /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/filters/ClassifyFiles.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including by constraints kind=problem|path-problem|alert|path-alert; precision=high|very-high; problem.severity=error|warning; tags contain=security.
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/AlertSuppression.ql failed the constraint of kind (was alert-suppression).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/ExtractionErrors.ql failed the constraint of kind (was diagnostic).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/SuccessfullyExtractedFiles.ql failed the constraint of kind (was diagnostic).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/ConstantLengthComparison.ql failed 'tags contain` constraint [correctness]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/InconsistentLoopOrientation.ql failed 'tags contain` constraint [correctness, external/cwe/cwe-835]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/LengthComparisonOffByOne.ql failed 'tags contain` constraint [reliability, correctness, logic, external/cwe/cwe-193]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/MissingErrorCheck.ql failed 'tags contain` constraint [reliability, correctness, logic]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/MistypedExponentiation.ql failed 'tags contain` constraint [correctness]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/WhitespaceContradictsPrecedence.ql failed 'tags contain` constraint [maintainability, correctness, external/cwe/cwe-783]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/WrappedErrorAlwaysNil.ql failed 'tags contain` constraint [reliability, correctness, logic]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Metrics/FLinesOfCode.ql failed the constraint of kind (was metric).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Metrics/FLinesOfComment.ql failed the constraint of kind (was metric).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/CompareIdenticalValues.ql failed 'tags contain` constraint [correctness, external/cwe/cwe-570, external/cwe/cwe-571]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/DeadStoreOfField.ql failed 'tags contain` constraint [maintainability, external/cwe/cwe-563]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/DeadStoreOfLocal.ql failed 'tags contain` constraint [maintainability, external/cwe/cwe-563]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/DuplicateBranches.ql failed 'tags contain` constraint [maintainability, correctness, external/cwe/cwe-561]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/DuplicateCondition.ql failed 'tags contain` constraint [maintainability, correctness, external/cwe/cwe-561]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/DuplicateSwitchCase.ql failed 'tags contain` constraint [maintainability, correctness, external/cwe/cwe-561]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/ExprHasNoEffect.ql failed 'tags contain` constraint [maintainability, correctness, external/cwe/cwe-480, external/cwe/cwe-561]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/ImpossibleInterfaceNilCheck.ql failed 'tags contain` constraint [correctness]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/NegativeLengthCheck.ql failed 'tags contain` constraint [correctness]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/RedundantExpr.ql failed 'tags contain` constraint [correctness, external/cwe/cwe-480, external/cwe/cwe-561]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/RedundantRecover.ql failed 'tags contain` constraint [maintainability, correctness]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/SelfAssignment.ql failed 'tags contain` constraint [correctness, external/cwe/cwe-480, external/cwe/cwe-561]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/ShiftOutOfRange.ql failed 'tags contain` constraint [correctness, external/cwe/cwe-197]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/UnreachableStatement.ql failed 'tags contain` constraint [maintainability, correctness, external/cwe/cwe-561]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/ExternalAPIsUsedWithUntrustedData.ql failed the constraint of kind (was table).
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteHostnameRegexp.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteUrlSchemeCheck.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/MissingRegexpAnchor.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/SuspiciousCharacterInRegexp.ql.
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/UntrustedDataToExternalAPI.ql failed the constraint of precision (was low).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/UntrustedDataToUnknownExternalAPI.ql failed the constraint of precision (was low).
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/TaintedPath.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/UnsafeUnzipSymlink.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/ZipSlip.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-078/CommandInjection.ql.
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-078/StoredCommand.ql failed the constraint of precision (was low).
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-079/ReflectedXss.ql.
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-079/StoredXss.ql failed the constraint of precision (was low).
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-089/SqlInjection.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-089/StringBreak.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-117/LogInjection.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-190/AllocationSizeOverflow.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-209/StackTraceExposure.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-295/DisabledCertificateCheck.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-312/CleartextLogging.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-322/InsecureHostKeyCallback.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-326/InsufficientKeySize.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-327/InsecureTLS.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-338/InsecureRandomness.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-352/ConstantOauth2State.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/BadRedirectCheck.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/OpenUrlRedirect.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-640/EmailInjection.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-643/XPathInjection.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-681/IncorrectIntegerConversionQuery.ql.
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-798/HardcodedCredentials.ql failed the constraint of precision (was medium).
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-918/RequestForgery.ql.
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Summary/LinesOfCode.ql failed the constraint of kind (was metric).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/definitions.ql failed the constraint of kind (was definitions).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-090/LDAPInjection.ql failed the constraint of precision (not present).
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-1004/CookieWithoutHttpOnly.ql.
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-285/PamAuthBypass.ql failed 'tags contain` constraint [maintainability, correctness, external/cwe/cwe-561, external/cwe/cwe-285]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-321/HardcodedKeys.ql failed the constraint of precision (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-327/WeakCryptoAlgorithm.ql failed the constraint of precision (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-369/DivideByZero.ql failed the constraint of precision (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-400/DatabaseCallInLoop.ql failed 'tags contain` constraint []
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-79/HTMLTemplateEscapingPassthrough.ql failed the constraint of precision (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-807/SensitiveConditionBypass.ql failed the constraint of precision (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-840/ConditionalBypass.ql failed the constraint of precision (not present).
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-918/SSRF.ql.
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-942/CorsMisconfiguration.ql failed the constraint of precision (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/InconsistentCode/DeferInLoop.ql failed the constraint of precision (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/InconsistentCode/GORMErrorNotChecked.ql failed 'tags contain` constraint []
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/IntegerOverflow/IntegerOverflow.ql failed the constraint of precision (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/Unsafe/WrongUsageOfUnsafe.ql failed the constraint of precision (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/filters/ClassifyFiles.ql failed the constraint of kind (was file-classifier).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Resolution instruction: include.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including by constraints kind=diagnostic.
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/AlertSuppression.ql failed the constraint of kind (was alert-suppression).
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/ExtractionErrors.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/SuccessfullyExtractedFiles.ql.
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/ConstantLengthComparison.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/InconsistentLoopOrientation.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/LengthComparisonOffByOne.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/MissingErrorCheck.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/MistypedExponentiation.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/WhitespaceContradictsPrecedence.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/WrappedErrorAlwaysNil.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Metrics/FLinesOfCode.ql failed the constraint of kind (was metric).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Metrics/FLinesOfComment.ql failed the constraint of kind (was metric).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/CompareIdenticalValues.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/DeadStoreOfField.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/DeadStoreOfLocal.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/DuplicateBranches.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/DuplicateCondition.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/DuplicateSwitchCase.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/ExprHasNoEffect.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/ImpossibleInterfaceNilCheck.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/NegativeLengthCheck.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/RedundantExpr.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/RedundantRecover.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/SelfAssignment.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/ShiftOutOfRange.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/UnreachableStatement.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/ExternalAPIsUsedWithUntrustedData.ql failed the constraint of kind (was table).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/UntrustedDataToExternalAPI.ql failed the constraint of kind (was path-problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/UntrustedDataToUnknownExternalAPI.ql failed the constraint of kind (was path-problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-078/StoredCommand.ql failed the constraint of kind (was path-problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-079/StoredXss.ql failed the constraint of kind (was path-problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-798/HardcodedCredentials.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Summary/LinesOfCode.ql failed the constraint of kind (was metric).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/definitions.ql failed the constraint of kind (was definitions).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-090/LDAPInjection.ql failed the constraint of kind (was path-problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-285/PamAuthBypass.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-321/HardcodedKeys.ql failed the constraint of kind (was path-problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-327/WeakCryptoAlgorithm.ql failed the constraint of kind (was path-problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-369/DivideByZero.ql failed the constraint of kind (was path-problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-400/DatabaseCallInLoop.ql failed the constraint of kind (was path-problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-79/HTMLTemplateEscapingPassthrough.ql failed the constraint of kind (was path-problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-807/SensitiveConditionBypass.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-840/ConditionalBypass.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-942/CorsMisconfiguration.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/InconsistentCode/DeferInLoop.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/InconsistentCode/GORMErrorNotChecked.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/IntegerOverflow/IntegerOverflow.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/Unsafe/WrongUsageOfUnsafe.ql failed the constraint of kind (was path-problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/filters/ClassifyFiles.ql failed the constraint of kind (was file-classifier).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Resolution instruction: include.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including by constraints kind=metric; tags contain=summary.
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/AlertSuppression.ql failed the constraint of kind (was alert-suppression).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/ConstantLengthComparison.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/InconsistentLoopOrientation.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/LengthComparisonOffByOne.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/MissingErrorCheck.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/MistypedExponentiation.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/WhitespaceContradictsPrecedence.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/InconsistentCode/WrappedErrorAlwaysNil.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Metrics/FLinesOfCode.ql failed 'tags contain` constraint [maintainability]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Metrics/FLinesOfComment.ql failed 'tags contain` constraint [documentation]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/CompareIdenticalValues.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/DeadStoreOfField.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/DeadStoreOfLocal.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/DuplicateBranches.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/DuplicateCondition.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/DuplicateSwitchCase.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/ExprHasNoEffect.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/ImpossibleInterfaceNilCheck.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/NegativeLengthCheck.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/RedundantExpr.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/RedundantRecover.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/SelfAssignment.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/ShiftOutOfRange.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/RedundantCode/UnreachableStatement.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/ExternalAPIsUsedWithUntrustedData.ql failed the constraint of kind (was table).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/UntrustedDataToExternalAPI.ql failed the constraint of kind (was path-problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/UntrustedDataToUnknownExternalAPI.ql failed the constraint of kind (was path-problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-078/StoredCommand.ql failed the constraint of kind (was path-problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-079/StoredXss.ql failed the constraint of kind (was path-problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-798/HardcodedCredentials.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Summary/LinesOfCode.ql.
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/definitions.ql failed the constraint of kind (was definitions).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-090/LDAPInjection.ql failed the constraint of kind (was path-problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-285/PamAuthBypass.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-321/HardcodedKeys.ql failed the constraint of kind (was path-problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-327/WeakCryptoAlgorithm.ql failed the constraint of kind (was path-problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-369/DivideByZero.ql failed the constraint of kind (was path-problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-400/DatabaseCallInLoop.ql failed the constraint of kind (was path-problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-79/HTMLTemplateEscapingPassthrough.ql failed the constraint of kind (was path-problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-807/SensitiveConditionBypass.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-840/ConditionalBypass.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-942/CorsMisconfiguration.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/InconsistentCode/DeferInLoop.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/InconsistentCode/GORMErrorNotChecked.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/IntegerOverflow/IntegerOverflow.ql failed the constraint of kind (was problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/Unsafe/WrongUsageOfUnsafe.ql failed the constraint of kind (was path-problem).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/filters/ClassifyFiles.ql failed the constraint of kind (was file-classifier).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Resolution instruction: exclude.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Excluding by constraints deprecated=//.
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteHostnameRegexp.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteUrlSchemeCheck.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/MissingRegexpAnchor.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/SuspiciousCharacterInRegexp.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/TaintedPath.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/UnsafeUnzipSymlink.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/ZipSlip.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-078/CommandInjection.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-079/ReflectedXss.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-089/SqlInjection.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-089/StringBreak.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-117/LogInjection.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-190/AllocationSizeOverflow.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-209/StackTraceExposure.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-295/DisabledCertificateCheck.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-312/CleartextLogging.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-322/InsecureHostKeyCallback.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-326/InsufficientKeySize.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-327/InsecureTLS.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-338/InsecureRandomness.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-352/ConstantOauth2State.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/BadRedirectCheck.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/OpenUrlRedirect.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-640/EmailInjection.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-643/XPathInjection.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-681/IncorrectIntegerConversionQuery.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-918/RequestForgery.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-1004/CookieWithoutHttpOnly.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-918/SSRF.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/ExtractionErrors.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/SuccessfullyExtractedFiles.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Summary/LinesOfCode.ql failed the constraint of deprecated (not present).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Resolution instruction: exclude.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Excluding by constraints query path=/^experimental\/.*/|Metrics/Summaries/FrameworkCoverage.ql|/Diagnostics/Internal/.*/.
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteHostnameRegexp.ql failed the constraint of query path (was Security/CWE-020/IncompleteHostnameRegexp.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteUrlSchemeCheck.ql failed the constraint of query path (was Security/CWE-020/IncompleteUrlSchemeCheck.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/MissingRegexpAnchor.ql failed the constraint of query path (was Security/CWE-020/MissingRegexpAnchor.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/SuspiciousCharacterInRegexp.ql failed the constraint of query path (was Security/CWE-020/SuspiciousCharacterInRegexp.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/TaintedPath.ql failed the constraint of query path (was Security/CWE-022/TaintedPath.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/UnsafeUnzipSymlink.ql failed the constraint of query path (was Security/CWE-022/UnsafeUnzipSymlink.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/ZipSlip.ql failed the constraint of query path (was Security/CWE-022/ZipSlip.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-078/CommandInjection.ql failed the constraint of query path (was Security/CWE-078/CommandInjection.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-079/ReflectedXss.ql failed the constraint of query path (was Security/CWE-079/ReflectedXss.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-089/SqlInjection.ql failed the constraint of query path (was Security/CWE-089/SqlInjection.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-089/StringBreak.ql failed the constraint of query path (was Security/CWE-089/StringBreak.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-117/LogInjection.ql failed the constraint of query path (was Security/CWE-117/LogInjection.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-190/AllocationSizeOverflow.ql failed the constraint of query path (was Security/CWE-190/AllocationSizeOverflow.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-209/StackTraceExposure.ql failed the constraint of query path (was Security/CWE-209/StackTraceExposure.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-295/DisabledCertificateCheck.ql failed the constraint of query path (was Security/CWE-295/DisabledCertificateCheck.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-312/CleartextLogging.ql failed the constraint of query path (was Security/CWE-312/CleartextLogging.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-322/InsecureHostKeyCallback.ql failed the constraint of query path (was Security/CWE-322/InsecureHostKeyCallback.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-326/InsufficientKeySize.ql failed the constraint of query path (was Security/CWE-326/InsufficientKeySize.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-327/InsecureTLS.ql failed the constraint of query path (was Security/CWE-327/InsecureTLS.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-338/InsecureRandomness.ql failed the constraint of query path (was Security/CWE-338/InsecureRandomness.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-352/ConstantOauth2State.ql failed the constraint of query path (was Security/CWE-352/ConstantOauth2State.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/BadRedirectCheck.ql failed the constraint of query path (was Security/CWE-601/BadRedirectCheck.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/OpenUrlRedirect.ql failed the constraint of query path (was Security/CWE-601/OpenUrlRedirect.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-640/EmailInjection.ql failed the constraint of query path (was Security/CWE-640/EmailInjection.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-643/XPathInjection.ql failed the constraint of query path (was Security/CWE-643/XPathInjection.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-681/IncorrectIntegerConversionQuery.ql failed the constraint of query path (was Security/CWE-681/IncorrectIntegerConversionQuery.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-918/RequestForgery.ql failed the constraint of query path (was Security/CWE-918/RequestForgery.ql).
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Excluding /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-1004/CookieWithoutHttpOnly.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Excluding /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/experimental/CWE-918/SSRF.ql.
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/ExtractionErrors.ql failed the constraint of query path (was Diagnostics/ExtractionErrors.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/SuccessfullyExtractedFiles.ql failed the constraint of query path (was Diagnostics/SuccessfullyExtractedFiles.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Summary/LinesOfCode.ql failed the constraint of query path (was Summary/LinesOfCode.ql).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Resolution instruction: exclude.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Excluding by constraints tags contain=model-generator.
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteHostnameRegexp.ql failed 'tags contain` constraint [correctness, security, external/cwe/cwe-20]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteUrlSchemeCheck.ql failed 'tags contain` constraint [security, correctness, external/cwe/cwe-020]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/MissingRegexpAnchor.ql failed 'tags contain` constraint [correctness, security, external/cwe/cwe-20]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/SuspiciousCharacterInRegexp.ql failed 'tags contain` constraint [correctness, security, external/cwe/cwe-20]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/TaintedPath.ql failed 'tags contain` constraint [security, external/cwe/cwe-022, external/cwe/cwe-023, external/cwe/cwe-036, external/cwe/cwe-073, external/cwe/cwe-099]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/UnsafeUnzipSymlink.ql failed 'tags contain` constraint [security, external/cwe/cwe-022]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/ZipSlip.ql failed 'tags contain` constraint [security, external/cwe/cwe-022]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-078/CommandInjection.ql failed 'tags contain` constraint [security, external/cwe/cwe-078]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-079/ReflectedXss.ql failed 'tags contain` constraint [security, external/cwe/cwe-079, external/cwe/cwe-116]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-089/SqlInjection.ql failed 'tags contain` constraint [security, external/cwe/cwe-089]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-089/StringBreak.ql failed 'tags contain` constraint [correctness, security, external/cwe/cwe-078, external/cwe/cwe-089, external/cwe/cwe-094]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-117/LogInjection.ql failed 'tags contain` constraint [security, external/cwe/cwe-117]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-190/AllocationSizeOverflow.ql failed 'tags contain` constraint [security, external/cwe/cwe-190]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-209/StackTraceExposure.ql failed 'tags contain` constraint [security, external/cwe/cwe-209, external/cwe/cwe-497]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-295/DisabledCertificateCheck.ql failed 'tags contain` constraint [security, external/cwe/cwe-295]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-312/CleartextLogging.ql failed 'tags contain` constraint [security, external/cwe/cwe-312, external/cwe/cwe-315, external/cwe/cwe-359]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-322/InsecureHostKeyCallback.ql failed 'tags contain` constraint [security]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-326/InsufficientKeySize.ql failed 'tags contain` constraint [security, external/cwe/cwe-326]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-327/InsecureTLS.ql failed 'tags contain` constraint [security, external/cwe/cwe-327]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-338/InsecureRandomness.ql failed 'tags contain` constraint [security, external/cwe/cwe-338]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-352/ConstantOauth2State.ql failed 'tags contain` constraint [security, external/cwe/cwe-352]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/BadRedirectCheck.ql failed 'tags contain` constraint [security, external/cwe/cwe-601]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/OpenUrlRedirect.ql failed 'tags contain` constraint [security, external/cwe/cwe-601]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-640/EmailInjection.ql failed 'tags contain` constraint [security, external/cwe/cwe-640]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-643/XPathInjection.ql failed 'tags contain` constraint [security, external/cwe/cwe-643]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-681/IncorrectIntegerConversionQuery.ql failed 'tags contain` constraint [security, external/cwe/cwe-190, external/cwe/cwe-681]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-918/RequestForgery.ql failed 'tags contain` constraint [security, external/cwe/cwe-918]
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/ExtractionErrors.ql failed 'tags contain` constraint []
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/SuccessfullyExtractedFiles.ql failed 'tags contain` constraint []
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Summary/LinesOfCode.ql failed 'tags contain` constraint [summary, lines-of-code]
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Applying nested suite file '/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.codeql/libraries/codeql/suite-helpers/0.2.0/code-scanning-selectors.yml'.
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Resolution instruction: exclude.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteHostnameRegexp.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteUrlSchemeCheck.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/MissingRegexpAnchor.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/SuspiciousCharacterInRegexp.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/TaintedPath.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/UnsafeUnzipSymlink.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/ZipSlip.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-078/CommandInjection.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-079/ReflectedXss.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-089/SqlInjection.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-089/StringBreak.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-117/LogInjection.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-190/AllocationSizeOverflow.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-209/StackTraceExposure.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-295/DisabledCertificateCheck.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-312/CleartextLogging.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-322/InsecureHostKeyCallback.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-326/InsufficientKeySize.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-327/InsecureTLS.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-338/InsecureRandomness.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-352/ConstantOauth2State.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/BadRedirectCheck.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/OpenUrlRedirect.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-640/EmailInjection.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-643/XPathInjection.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-681/IncorrectIntegerConversionQuery.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-918/RequestForgery.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/ExtractionErrors.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/SuccessfullyExtractedFiles.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Implicitly including /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Summary/LinesOfCode.ql.
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Excluding by constraints id=go/log-injection|go/sql-injection.
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteHostnameRegexp.ql failed the constraint of id (was go/incomplete-hostname-regexp).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteUrlSchemeCheck.ql failed the constraint of id (was go/incomplete-url-scheme-check).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/MissingRegexpAnchor.ql failed the constraint of id (was go/regex/missing-regexp-anchor).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/SuspiciousCharacterInRegexp.ql failed the constraint of id (was go/suspicious-character-in-regex).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/TaintedPath.ql failed the constraint of id (was go/path-injection).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/UnsafeUnzipSymlink.ql failed the constraint of id (was go/unsafe-unzip-symlink).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/ZipSlip.ql failed the constraint of id (was go/zipslip).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-078/CommandInjection.ql failed the constraint of id (was go/command-injection).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-079/ReflectedXss.ql failed the constraint of id (was go/reflected-xss).
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Excluding /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-089/SqlInjection.ql.
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-089/StringBreak.ql failed the constraint of id (was go/unsafe-quoting).
+[2023-03-15 21:37:41] [SPAMMY] resolve queries> Query Filter: Excluding /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-117/LogInjection.ql.
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-190/AllocationSizeOverflow.ql failed the constraint of id (was go/allocation-size-overflow).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-209/StackTraceExposure.ql failed the constraint of id (was go/stack-trace-exposure).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-295/DisabledCertificateCheck.ql failed the constraint of id (was go/disabled-certificate-check).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-312/CleartextLogging.ql failed the constraint of id (was go/clear-text-logging).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-322/InsecureHostKeyCallback.ql failed the constraint of id (was go/insecure-hostkeycallback).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-326/InsufficientKeySize.ql failed the constraint of id (was go/weak-crypto-key).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-327/InsecureTLS.ql failed the constraint of id (was go/insecure-tls).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-338/InsecureRandomness.ql failed the constraint of id (was go/insecure-randomness).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-352/ConstantOauth2State.ql failed the constraint of id (was go/constant-oauth2-state).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/BadRedirectCheck.ql failed the constraint of id (was go/bad-redirect-check).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/OpenUrlRedirect.ql failed the constraint of id (was go/unvalidated-url-redirection).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-640/EmailInjection.ql failed the constraint of id (was go/email-injection).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-643/XPathInjection.ql failed the constraint of id (was go/xml/xpath-injection).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-681/IncorrectIntegerConversionQuery.ql failed the constraint of id (was go/incorrect-integer-conversion).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-918/RequestForgery.ql failed the constraint of id (was go/request-forgery).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/ExtractionErrors.ql failed the constraint of id (was go/diagnostics/extraction-errors).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/SuccessfullyExtractedFiles.ql failed the constraint of id (was go/summary/successfully-extracted-files).
+[2023-03-15 21:37:41] [SPAMMIER] resolve queries> Query Filter: /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Summary/LinesOfCode.ql failed the constraint of id (was go/summary/lines-of-code).
+[2023-03-15 21:37:41] [DETAILS] resolve queries> Got 28 queries from /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-customs/0.0.0/infosys.qls.
+[2023-03-15 21:37:41] Plumbing command codeql resolve queries completed:
+                      [
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteHostnameRegexp.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteUrlSchemeCheck.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/MissingRegexpAnchor.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/SuspiciousCharacterInRegexp.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/TaintedPath.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/UnsafeUnzipSymlink.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/ZipSlip.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-078/CommandInjection.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-079/ReflectedXss.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-089/StringBreak.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-190/AllocationSizeOverflow.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-209/StackTraceExposure.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-295/DisabledCertificateCheck.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-312/CleartextLogging.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-322/InsecureHostKeyCallback.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-326/InsufficientKeySize.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-327/InsecureTLS.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-338/InsecureRandomness.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-352/ConstantOauth2State.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/BadRedirectCheck.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/OpenUrlRedirect.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-640/EmailInjection.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-643/XPathInjection.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-681/IncorrectIntegerConversionQuery.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-918/RequestForgery.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/ExtractionErrors.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/SuccessfullyExtractedFiles.ql",
+                        "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Summary/LinesOfCode.ql"
+                      ]
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Scanning for [codeql-pack.yml, qlpack.yml] from /Users/yukiendo/workplace/codeql/.codeqlmanifest.json
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Scanning for [codeql-pack.yml, qlpack.yml] from /Users/yukiendo/workplace/
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Scanning for [codeql-pack.yml, qlpack.yml] from /Users/yukiendo/workplace/vscode-codeql-starter/.codeqlmanifest.json
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Scanning for [codeql-pack.yml, qlpack.yml] from /Users/yukiendo/workplace/vscode-codeql-starter/ql/codeql-workspace.yml
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Scanning for [codeql-pack.yml, qlpack.yml] from /Users/yukiendo/workplace/codeql-2.21/.codeqlmanifest.json
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Scanning for [codeql-pack.yml, qlpack.yml] from /Users/yukiendo/workplace/codeql-workshop/.codeqlmanifest.json
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Scanning for [codeql-pack.yml, qlpack.yml] from /Users/yukiendo/workplace/codeql-workshop/cli/.codeqlmanifest.json
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Scanning for [codeql-pack.yml, qlpack.yml] from /Users/yukiendo/workplace/codeql-workshop/ql/.codeqlmanifest.json
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Not scanning from /Users/yukiendo/workplace/codeql which is already done.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteHostnameRegexp.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteHostnameRegexp.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteHostnameRegexp.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-020/IncompleteHostnameRegexp.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-020/IncompleteHostnameRegexp.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted pathproblem query "Incomplete regular expression for hostnames" (go/incomplete-hostname-regexp) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteHostnameRegexp.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteUrlSchemeCheck.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteUrlSchemeCheck.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteUrlSchemeCheck.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-020/IncompleteUrlSchemeCheck.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-020/IncompleteUrlSchemeCheck.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted problem query "Incomplete URL scheme check" (go/incomplete-url-scheme-check) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/IncompleteUrlSchemeCheck.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/MissingRegexpAnchor.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/MissingRegexpAnchor.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/MissingRegexpAnchor.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-020/MissingRegexpAnchor.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-020/MissingRegexpAnchor.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted problem query "Missing regular expression anchor" (go/regex/missing-regexp-anchor) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/MissingRegexpAnchor.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/SuspiciousCharacterInRegexp.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/SuspiciousCharacterInRegexp.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/SuspiciousCharacterInRegexp.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-020/SuspiciousCharacterInRegexp.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-020/SuspiciousCharacterInRegexp.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted pathproblem query "Suspicious characters in a regular expression" (go/suspicious-character-in-regex) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-020/SuspiciousCharacterInRegexp.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/TaintedPath.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/TaintedPath.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/TaintedPath.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-022/TaintedPath.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-022/TaintedPath.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted pathproblem query "Uncontrolled data used in path expression" (go/path-injection) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/TaintedPath.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/UnsafeUnzipSymlink.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/UnsafeUnzipSymlink.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/UnsafeUnzipSymlink.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-022/UnsafeUnzipSymlink.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-022/UnsafeUnzipSymlink.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted pathproblem query "Arbitrary file write extracting an archive containing symbolic links" (go/unsafe-unzip-symlink) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/UnsafeUnzipSymlink.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/ZipSlip.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/ZipSlip.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/ZipSlip.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-022/ZipSlip.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-022/ZipSlip.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted pathproblem query "Arbitrary file write during zip extraction ("zip slip")" (go/zipslip) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-022/ZipSlip.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-078/CommandInjection.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-078/CommandInjection.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-078/CommandInjection.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-078/CommandInjection.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-078/CommandInjection.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted pathproblem query "Command built from user-controlled sources" (go/command-injection) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-078/CommandInjection.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-079/ReflectedXss.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-079/ReflectedXss.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-079/ReflectedXss.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-079/ReflectedXss.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-079/ReflectedXss.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted pathproblem query "Reflected cross-site scripting" (go/reflected-xss) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-079/ReflectedXss.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-089/StringBreak.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-089/StringBreak.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-089/StringBreak.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-089/StringBreak.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-089/StringBreak.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted pathproblem query "Potentially unsafe quoting" (go/unsafe-quoting) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-089/StringBreak.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-190/AllocationSizeOverflow.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-190/AllocationSizeOverflow.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-190/AllocationSizeOverflow.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-190/AllocationSizeOverflow.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-190/AllocationSizeOverflow.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted pathproblem query "Size computation for allocation may overflow" (go/allocation-size-overflow) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-190/AllocationSizeOverflow.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-209/StackTraceExposure.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-209/StackTraceExposure.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-209/StackTraceExposure.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-209/StackTraceExposure.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-209/StackTraceExposure.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted pathproblem query "Information exposure through a stack trace" (go/stack-trace-exposure) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-209/StackTraceExposure.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-295/DisabledCertificateCheck.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-295/DisabledCertificateCheck.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-295/DisabledCertificateCheck.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-295/DisabledCertificateCheck.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-295/DisabledCertificateCheck.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted problem query "Disabled TLS certificate check" (go/disabled-certificate-check) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-295/DisabledCertificateCheck.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-312/CleartextLogging.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-312/CleartextLogging.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-312/CleartextLogging.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-312/CleartextLogging.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-312/CleartextLogging.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted pathproblem query "Clear-text logging of sensitive information" (go/clear-text-logging) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-312/CleartextLogging.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-322/InsecureHostKeyCallback.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-322/InsecureHostKeyCallback.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-322/InsecureHostKeyCallback.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-322/InsecureHostKeyCallback.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-322/InsecureHostKeyCallback.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted pathproblem query "Use of insecure HostKeyCallback implementation" (go/insecure-hostkeycallback) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-322/InsecureHostKeyCallback.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-326/InsufficientKeySize.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-326/InsufficientKeySize.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-326/InsufficientKeySize.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-326/InsufficientKeySize.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-326/InsufficientKeySize.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted pathproblem query "Use of a weak cryptographic key" (go/weak-crypto-key) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-326/InsufficientKeySize.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-327/InsecureTLS.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-327/InsecureTLS.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-327/InsecureTLS.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-327/InsecureTLS.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-327/InsecureTLS.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted pathproblem query "Insecure TLS configuration" (go/insecure-tls) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-327/InsecureTLS.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-338/InsecureRandomness.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-338/InsecureRandomness.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-338/InsecureRandomness.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-338/InsecureRandomness.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-338/InsecureRandomness.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted pathproblem query "Use of insufficient randomness as the key of a cryptographic algorithm" (go/insecure-randomness) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-338/InsecureRandomness.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-352/ConstantOauth2State.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-352/ConstantOauth2State.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-352/ConstantOauth2State.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-352/ConstantOauth2State.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-352/ConstantOauth2State.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted pathproblem query "Use of constant `state` value in OAuth 2.0 URL" (go/constant-oauth2-state) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-352/ConstantOauth2State.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/BadRedirectCheck.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/BadRedirectCheck.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/BadRedirectCheck.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-601/BadRedirectCheck.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-601/BadRedirectCheck.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted pathproblem query "Bad redirect check" (go/bad-redirect-check) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/BadRedirectCheck.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/OpenUrlRedirect.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/OpenUrlRedirect.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/OpenUrlRedirect.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-601/OpenUrlRedirect.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-601/OpenUrlRedirect.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted pathproblem query "Open URL redirect" (go/unvalidated-url-redirection) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-601/OpenUrlRedirect.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-640/EmailInjection.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-640/EmailInjection.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-640/EmailInjection.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-640/EmailInjection.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-640/EmailInjection.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted pathproblem query "Email content injection" (go/email-injection) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-640/EmailInjection.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-643/XPathInjection.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-643/XPathInjection.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-643/XPathInjection.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-643/XPathInjection.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-643/XPathInjection.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted pathproblem query "XPath injection" (go/xml/xpath-injection) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-643/XPathInjection.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-681/IncorrectIntegerConversionQuery.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-681/IncorrectIntegerConversionQuery.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-681/IncorrectIntegerConversionQuery.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-681/IncorrectIntegerConversionQuery.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-681/IncorrectIntegerConversionQuery.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted pathproblem query "Incorrect conversion between integer types" (go/incorrect-integer-conversion) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-681/IncorrectIntegerConversionQuery.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-918/RequestForgery.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-918/RequestForgery.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-918/RequestForgery.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Security/CWE-918/RequestForgery.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Security/CWE-918/RequestForgery.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted pathproblem query "Uncontrolled data used in network request" (go/request-forgery) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Security/CWE-918/RequestForgery.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/ExtractionErrors.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/ExtractionErrors.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/ExtractionErrors.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Diagnostics/ExtractionErrors.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Diagnostics/ExtractionErrors.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted diagnostic query "Extraction errors" (go/diagnostics/extraction-errors) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/ExtractionErrors.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/SuccessfullyExtractedFiles.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/SuccessfullyExtractedFiles.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/SuccessfullyExtractedFiles.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Diagnostics/SuccessfullyExtractedFiles.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Diagnostics/SuccessfullyExtractedFiles.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted diagnostic query "Successfully analyzed files" (go/summary/successfully-extracted-files) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Diagnostics/SuccessfullyExtractedFiles.ql.
+[2023-03-15 21:37:41] [PROGRESS] database interpret-results> Interpreting /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Summary/LinesOfCode.ql...
+[2023-03-15 21:37:41] Calling plumbing command: codeql resolve library-path --query=/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Summary/LinesOfCode.ql --full-library-path=none --dbscheme=none --format=json
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Resolving query at normalized path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Summary/LinesOfCode.ql.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Found enclosing pack 'codeql/go-queries' at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Adding compilation cache at /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache.
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/yukiendo/workplace/ghas-golang-samples/none
+[2023-03-15 21:37:41] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-03-15 21:37:41] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/yukiendo/workplace/ghas-golang-samples/none"
+                        ],
+                        "dbscheme" : "/Users/yukiendo/workplace/ghas-golang-samples/none",
+                        "compilationCache" : [
+                          "/Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/.cache"
+                        ],
+                        "relativeName" : "codeql/go-queries/Summary/LinesOfCode.ql",
+                        "qlPackName" : "codeql/go-queries"
+                      }
+[2023-03-15 21:37:41] [DETAILS] database interpret-results>  ... found results file at /Users/yukiendo/workplace/codeql-db/ghas-golang-samples/results/codeql/go-queries/Summary/LinesOfCode.bqrs.
+[2023-03-15 21:37:41] [DETAILS] database interpret-results> Interpreted metric query "Total lines of Go code in the database" (go/summary/lines-of-code) at path /Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.2.5/Summary/LinesOfCode.ql.
+[2023-03-15 21:37:41] Error retrieving qlpack commit hash from Git repository
+                      java.lang.IllegalArgumentException: Empty path not permitted.
+                      	at org.eclipse.jgit.treewalk.filter.PathFilter.create(PathFilter.java:80)
+                      	at org.eclipse.jgit.api.LogCommand.addPath(LogCommand.java:303)
+                      	at com.semmle.cli2.pack.PackUtil.lambda$getLastCommit$0(PackUtil.java:47)
+                      	at java.base/java.util.Optional.ifPresent(Unknown Source)
+                      	at com.semmle.cli2.pack.PackUtil.getLastCommit(PackUtil.java:42)
+                      	at com.semmle.cli2.pack.PackUtil.queryGitForHeadVersion(PackUtil.java:32)
+                      	at com.semmle.cli2.bqrs.InterpretCommand.getQlPackSha(InterpretCommand.java:347)
+                      	at com.semmle.cli2.bqrs.InterpretCommand.lambda$exportResults$2(InterpretCommand.java:268)
+                      	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+                      	at java.base/java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+                      	at java.base/java.util.Iterator.forEachRemaining(Unknown Source)
+                      	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source)
+                      	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+                      	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+                      	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+                      	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+                      	at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+                      	at com.semmle.cli2.bqrs.InterpretCommand.exportResults(InterpretCommand.java:272)
+                      	at com.semmle.cli2.database.InterpretResultsCommand.executeSubcommand(InterpretResultsCommand.java:210)
+                      	at com.semmle.cli2.picocli.PlumbingRunner.run(PlumbingRunner.java:110)
+                      	at com.semmle.cli2.picocli.SubcommandCommon.runPlumbingInProcess(SubcommandCommon.java:162)
+                      	at com.semmle.cli2.database.AnalyzeCommand.executeSubcommand(AnalyzeCommand.java:100)
+                      	at com.semmle.cli2.picocli.SubcommandCommon.call(SubcommandCommon.java:500)
+                      	at com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:205)
+                      	at com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:214)
+                      	at com.semmle.cli2.CodeQL.main(CodeQL.java:98)
+[2023-03-15 21:37:41] Error retrieving qlpack commit hash from Git repository
+                      java.lang.IllegalArgumentException: Empty path not permitted.
+                      	at org.eclipse.jgit.treewalk.filter.PathFilter.create(PathFilter.java:80)
+                      	at org.eclipse.jgit.api.LogCommand.addPath(LogCommand.java:303)
+                      	at com.semmle.cli2.pack.PackUtil.lambda$getLastCommit$0(PackUtil.java:47)
+                      	at java.base/java.util.Optional.ifPresent(Unknown Source)
+                      	at com.semmle.cli2.pack.PackUtil.getLastCommit(PackUtil.java:42)
+                      	at com.semmle.cli2.pack.PackUtil.queryGitForHeadVersion(PackUtil.java:32)
+                      	at com.semmle.cli2.bqrs.InterpretCommand.getQlPackSha(InterpretCommand.java:347)
+                      	at com.semmle.cli2.bqrs.InterpretCommand.lambda$exportResults$2(InterpretCommand.java:268)
+                      	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+                      	at java.base/java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+                      	at java.base/java.util.Iterator.forEachRemaining(Unknown Source)
+                      	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source)
+                      	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+                      	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+                      	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+                      	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+                      	at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+                      	at com.semmle.cli2.bqrs.InterpretCommand.exportResults(InterpretCommand.java:272)
+                      	at com.semmle.cli2.database.InterpretResultsCommand.executeSubcommand(InterpretResultsCommand.java:210)
+                      	at com.semmle.cli2.picocli.PlumbingRunner.run(PlumbingRunner.java:110)
+                      	at com.semmle.cli2.picocli.SubcommandCommon.runPlumbingInProcess(SubcommandCommon.java:162)
+                      	at com.semmle.cli2.database.AnalyzeCommand.executeSubcommand(AnalyzeCommand.java:100)
+                      	at com.semmle.cli2.picocli.SubcommandCommon.call(SubcommandCommon.java:500)
+                      	at com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:205)
+                      	at com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:214)
+                      	at com.semmle.cli2.CodeQL.main(CodeQL.java:98)
+[2023-03-15 21:37:42] Error retrieving qlpack commit hash from Git repository
+                      java.lang.IllegalArgumentException: Empty path not permitted.
+                      	at org.eclipse.jgit.treewalk.filter.PathFilter.create(PathFilter.java:80)
+                      	at org.eclipse.jgit.api.LogCommand.addPath(LogCommand.java:303)
+                      	at com.semmle.cli2.pack.PackUtil.lambda$getLastCommit$0(PackUtil.java:47)
+                      	at java.base/java.util.Optional.ifPresent(Unknown Source)
+                      	at com.semmle.cli2.pack.PackUtil.getLastCommit(PackUtil.java:42)
+                      	at com.semmle.cli2.pack.PackUtil.queryGitForHeadVersion(PackUtil.java:32)
+                      	at com.semmle.cli2.bqrs.InterpretCommand.getQlPackSha(InterpretCommand.java:347)
+                      	at com.semmle.cli2.bqrs.InterpretCommand.lambda$exportResults$2(InterpretCommand.java:268)
+                      	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+                      	at java.base/java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+                      	at java.base/java.util.Iterator.forEachRemaining(Unknown Source)
+                      	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source)
+                      	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+                      	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+                      	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+                      	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+                      	at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+                      	at com.semmle.cli2.bqrs.InterpretCommand.exportResults(InterpretCommand.java:272)
+                      	at com.semmle.cli2.database.InterpretResultsCommand.executeSubcommand(InterpretResultsCommand.java:210)
+                      	at com.semmle.cli2.picocli.PlumbingRunner.run(PlumbingRunner.java:110)
+                      	at com.semmle.cli2.picocli.SubcommandCommon.runPlumbingInProcess(SubcommandCommon.java:162)
+                      	at com.semmle.cli2.database.AnalyzeCommand.executeSubcommand(AnalyzeCommand.java:100)
+                      	at com.semmle.cli2.picocli.SubcommandCommon.call(SubcommandCommon.java:500)
+                      	at com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:205)
+                      	at com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:214)
+                      	at com.semmle.cli2.CodeQL.main(CodeQL.java:98)
+[2023-03-15 21:37:42] Error retrieving qlpack commit hash from Git repository
+                      java.lang.IllegalArgumentException: Empty path not permitted.
+                      	at org.eclipse.jgit.treewalk.filter.PathFilter.create(PathFilter.java:80)
+                      	at org.eclipse.jgit.api.LogCommand.addPath(LogCommand.java:303)
+                      	at com.semmle.cli2.pack.PackUtil.lambda$getLastCommit$0(PackUtil.java:47)
+                      	at java.base/java.util.Optional.ifPresent(Unknown Source)
+                      	at com.semmle.cli2.pack.PackUtil.getLastCommit(PackUtil.java:42)
+                      	at com.semmle.cli2.pack.PackUtil.queryGitForHeadVersion(PackUtil.java:32)
+                      	at com.semmle.cli2.bqrs.InterpretCommand.getQlPackSha(InterpretCommand.java:347)
+                      	at com.semmle.cli2.bqrs.InterpretCommand.lambda$exportResults$2(InterpretCommand.java:268)
+                      	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+                      	at java.base/java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+                      	at java.base/java.util.Iterator.forEachRemaining(Unknown Source)
+                      	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source)
+                      	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+                      	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+                      	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+                      	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+                      	at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+                      	at com.semmle.cli2.bqrs.InterpretCommand.exportResults(InterpretCommand.java:272)
+                      	at com.semmle.cli2.database.InterpretResultsCommand.executeSubcommand(InterpretResultsCommand.java:210)
+                      	at com.semmle.cli2.picocli.PlumbingRunner.run(PlumbingRunner.java:110)
+                      	at com.semmle.cli2.picocli.SubcommandCommon.runPlumbingInProcess(SubcommandCommon.java:162)
+                      	at com.semmle.cli2.database.AnalyzeCommand.executeSubcommand(AnalyzeCommand.java:100)
+                      	at com.semmle.cli2.picocli.SubcommandCommon.call(SubcommandCommon.java:500)
+                      	at com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:205)
+                      	at com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:214)
+                      	at com.semmle.cli2.CodeQL.main(CodeQL.java:98)
+[2023-03-15 21:37:42] Plumbing command codeql database interpret-results completed.
+[2023-03-15 21:37:42] Terminating normally.

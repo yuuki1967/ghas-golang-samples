@@ -73,6 +73,13 @@ func dbFindOne(coll *mongo.Collection, mynum string) {
 	fmt.Println(result)
 }
 
+func dbDeleteOne(coll *mongo.Collection) {
+	filter := bson.D{{"mynumber", "111111"}}
+	deleteResult, err := coll.DeleteOne(context.TODO(), filter)
+	fmt.Printf("err = %s", err)
+	fmt.Printf("DeleteOne removed %v document(s)\n", deleteResult.DeletedCount)
+}
+
 func hello(w http.ResponseWriter, req *http.Request) {
 	defer req.Body.Close()
 	b, _ := io.ReadAll(req.Body)
