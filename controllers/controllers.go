@@ -6,7 +6,7 @@ import (
 	"io"
 	"net/http"
 
-	"example.com/logger"
+	"github.com/yuuki1967/util/logger"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
