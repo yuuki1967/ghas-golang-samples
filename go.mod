@@ -4,11 +4,10 @@ go 1.18
 
 replace example.com/controllers => ./controllers
 
-replace example.com/logger => ./util/logger
-
 require example.com/controllers v0.0.0-00010101000000-000000000000
 
 require (
+        github.com/yuuki1967/util v1.0.0 
 	example.com/logger v0.0.0-00010101000000-000000000000 // indirect
 	github.com/golang/snappy v0.0.1 // indirect
 	github.com/klauspost/compress v1.13.6 // indirect
