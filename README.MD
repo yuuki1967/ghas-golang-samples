@@ -1,3 +1,4 @@
+[![Go Dependency Submission](https://github.com/yuuki1967/ghas-golang-samples/actions/workflows/dependency-submission.yml/badge.svg)](https://github.com/yuuki1967/ghas-golang-samples/actions/workflows/dependency-submission.yml)
 # The repo for evaluating the custom query for supporting logrus
 
 ## Background
